@@ -283,7 +283,6 @@ describe('useCart Hook', () => {
     act(() => {
       result.current.removeProduct(productId);
     });
-
     expect(mockedToastError).toHaveBeenCalledWith('Erro na remoção do produto');
     expect(result.current.cart).toEqual(
       expect.arrayContaining(initialStoragedData)
